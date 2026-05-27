@@ -113,3 +113,49 @@ The following environment variables are optional. If they are not provided, Bold
     </tr>
 </table>
 <br/>
+
+### Environment variables for configuring `Storage` in backend
+
+The following environment variables are optional. If not provided, Bold BI will use the default configured values.
+
+<br/>
+
+#### OCI Storage Configuration
+
+| Name                          |Required| Description   | 
+| -------------                 |----------| ------------- |
+| `BOLD_SERVICES_OCI_ACCESS_KEY` |No| OCI access key for authentication. |
+| `BOLD_SERVICES_OCI_BUCKET_NAME` |No| Name of the OCI bucket to use for storage. |
+| `BOLD_SERVICES_OCI_NAME_SPACE` |No| OCI namespace (tenant OCID or namespace name). |
+| `BOLD_SERVICES_OCI_REGION` |No| OCI region where the bucket is located (e.g., us-ashburn-1). |
+| `BOLD_SERVICES_OCI_ROOTFOLDER_NAME` |No| Root folder path within the bucket for storing data. |
+| `BOLD_SERVICES_OCI_SECRET_KEY` |No| OCI secret key for authentication. |
+| `BOLD_SERVICES_STORAGETYPE` |No| Type of storage. Set to `4` for OCI storage. |
+
+<br/>
+
+#### AWS S3 Storage Configuration
+
+| Name                          |Required| Description   | 
+| -------------                 |----------| ------------- |
+| `BOLD_SERVICES_AWS_ACCESS_KEY_ID` |No| AWS access key ID for authentication. |
+| `BOLD_SERVICES_AMAZON_BUCKET_NAME` |No| Name of the S3 bucket to use for storage. |
+| `BOLD_SERVICES_AWS_REGION` |No| AWS region where the bucket is located (e.g., us-east-1). |
+| `BOLD_SERVICES_AMAZON_ROOTFOLDER_NAME` |No| Root folder path within the bucket for storing data. |
+| `BOLD_SERVICES_AWS_SECRET_ACCESS_KEY` |No| AWS secret access key for authentication. |
+| `BOLD_SERVICES_STORAGETYPE` |No| Type of storage. Set to `3` for S3 storage. |
+
+<br/>
+
+#### Azure Blob Storage Configuration
+
+| Name                          |Required| Description   | 
+| -------------                 |----------| ------------- |
+| `BOLD_SERVICES_AZUREBLOB_ACCESSKEY` |No| Azure Blob storage access key for authentication. |
+| `BOLD_SERVICES_AZUREBLOB_ACCOUNT_NAME` |No| Azure Blob storage account name. |
+| `BOLD_SERVICES_AZUREBLOB_CONTAINER_NAME` |No| Name of the Azure Blob container to use for storage. |
+| `BOLD_SERVICES_AZUREBLOB_CONNECTION_TYPE` |No| Azure Blob connection type (e.g., DefaultEndpointsProtocol). |
+| `BOLD_SERVICES_AZUREBLOB_STORAGE_URI` |No| Azure Blob storage URI endpoint. |
+| `BOLD_SERVICES_STORAGETYPE` |No| Type of storage. Set to `1` for Azure Blob storage. |
+
+<br/>
