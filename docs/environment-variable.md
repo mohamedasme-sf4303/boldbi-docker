@@ -116,7 +116,7 @@ The following environment variables are optional. If they are not provided, Bold
 
 ### Environment variables for configuring `Storage` in backend
 
-The following environment variables are optional. If not provided, Bold BI will use the default configured values.
+The following environment variables are optional. If not provided, Bold BI will use the default volume.
 
 <br/>
 
@@ -144,18 +144,5 @@ The following environment variables are optional. If not provided, Bold BI will 
 | `BOLD_SERVICES_AMAZON_ROOTFOLDER_NAME` |No| Root folder path within the bucket for storing data. |
 | `BOLD_SERVICES_AWS_SECRET_ACCESS_KEY` |No| AWS secret access key for authentication. |
 | `BOLD_SERVICES_STORAGETYPE` |No| Type of storage. Set to `3` for S3 storage. |
-
-<br/>
-
-#### Azure Blob Storage Configuration
-
-| Name                          |Required| Description   | 
-| -------------                 |----------| ------------- |
-| `BOLD_SERVICES_AZUREBLOB_ACCESSKEY` |No| Azure Blob storage access key for authentication. |
-| `BOLD_SERVICES_AZUREBLOB_ACCOUNT_NAME` |No| Azure Blob storage account name. |
-| `BOLD_SERVICES_AZUREBLOB_CONTAINER_NAME` |No| Name of the Azure Blob container to use for storage. |
-| `BOLD_SERVICES_AZUREBLOB_CONNECTION_TYPE` |No| Azure Blob connection type (e.g., DefaultEndpointsProtocol). |
-| `BOLD_SERVICES_AZUREBLOB_STORAGE_URI` |No| Azure Blob storage URI endpoint. |
-| `BOLD_SERVICES_STORAGETYPE` |No| Type of storage. Set to `1` for Azure Blob storage. |
 
 <br/>
