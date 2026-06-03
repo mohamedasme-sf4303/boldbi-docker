@@ -8,6 +8,9 @@ services:
       - INSTALL_OPTIONAL_LIBS=mongodb,mysql,influxdb,snowflake,oracle,clickhouse,google
       - DEPLOY_MODE=docker_multi_container
       - Is_Common_IDP=true
+      - ID_Version=4.19.1
+      - BI_Version=15.3.8
+      - Reports_Version=13.1.26
     volumes:
       - boldservices_data:/application/app_data
     networks:
@@ -289,19 +292,32 @@ services:
     networks:
       - boldservices
     depends_on:
-      - id-web
-      - id-api
-      - id-ums
-      - bi-web
-      - bi-api
-      - bi-jobs
-      - bi-dataservice
-      - bold-ai
-      - reports-web
-      - reports-api
-      - reports-jobs
-      - reports-reportservice
-      - reports-viewer
+      id-web:
+        condition: service_started
+      id-api:
+        condition: service_started
+      id-ums:
+        condition: service_started
+      bi-web:
+        condition: service_started
+      bi-api:
+        condition: service_started
+      bi-jobs:
+        condition: service_started
+      bi-dataservice:
+        condition: service_started
+      bold-ai:
+        condition: service_started
+      reports-web:
+        condition: service_started
+      reports-api:
+        condition: service_started
+      reports-jobs:
+        condition: service_started
+      reports-reportservice:
+        condition: service_started
+      reports-viewer:
+        condition: service_started
   pgdb:
     image: postgres:17
     restart: always
